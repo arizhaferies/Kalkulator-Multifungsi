@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="403.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.konversiController">
+    <HBox prefHeight="219.0" prefWidth="532.0" style="-fx-background-color: ffcc99;">
+        <children>
+
+            <VBox onDragDetected="#radioButtonSelection" prefHeight="171.0" prefWidth="236.0">
+                <children>
+                    <Label prefHeight="30.0" prefWidth="191.0" text="Pilih Operasi" textAlignment="CENTER">
+                        <VBox.margin>
+                            <Insets bottom="20.0" left="20.0" top="20.0" />
+                        </VBox.margin>
+                  <font>
+                     <Font size="20.0" />
+                  </font>
+               </Label>
+                    <RadioButton fx:id="dec2Bin" mnemonicParsing="false" onAction="#radioButtonSelection" prefHeight="21.0" prefWidth="177.0" text="Desimal ke Biner">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="radioGroup" />
+                        </toggleGroup>
+                  <font>
+                     <Font size="15.0" />
+                  </font></RadioButton>
+                    <RadioButton fx:id="dec2Hex" mnemonicParsing="false" onAction="#radioButtonSelection" prefHeight="21.0" prefWidth="149.0" text="Desimal ke Hex" toggleGroup="$radioGroup">
+                  <font>
+                     <Font size="15.0" />
+                  </font></RadioButton>
+                    <RadioButton fx:id="bin2Dec" mnemonicParsing="false" onAction="#radioButtonSelection" prefHeight="21.0" prefWidth="151.0" text="Biner ke Desimal" toggleGroup="$radioGroup">
+                  <font>
+                     <Font size="15.0" />
+                  </font></RadioButton>
+                    <RadioButton fx:id="hex2Dec" mnemonicParsing="false" onAction="#radioButtonSelection" prefHeight="25.0" prefWidth="147.0" text="Hex ke desimal" toggleGroup="$radioGroup">
+                  <font>
+                     <Font size="16.0" />
+                  </font></RadioButton>
+                </children>
+                <HBox.margin>
+                    <Insets left="20.0" />
+                </HBox.margin>
+            </VBox>
+
+            <VBox alignment="TOP_CENTER" prefHeight="178.0" prefWidth="267.0">
+                <Label alignment="CENTER" contentDisplay="TOP" prefHeight="16.0" prefWidth="230.0" text="Masukkan Nomor untuk Mengkonversi">
+                    <VBox.margin>
+                        <Insets top="40.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="numberField" onKeyPressed="#handleEnterPressed" prefHeight="40.0" prefWidth="345.0" />
+                <Button fx:id="calculateButton" alignment="CENTER" mnemonicParsing="false" onAction="#calculateConversion" prefHeight="26.0" prefWidth="83.0" text="Konversi">
+                    <VBox.margin>
+                        <Insets top="7.0" />
+                    </VBox.margin>
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+                <HBox.margin>
+                    <Insets right="20.0" />
+                </HBox.margin>
+            </VBox>
+
+
+        </children>
+    </HBox>
+    <VBox alignment="BOTTOM_CENTER" prefHeight="141.0" prefWidth="532.0">
+        <children>
+            <HBox prefHeight="68.0" prefWidth="599.0">
+                <children>
+                    <Label alignment="CENTER" contentDisplay="TOP" prefHeight="33.0" prefWidth="124.0" text="Output yang Dikonversi:">
+                        <HBox.margin>
+                            <Insets left="20.0" />
+                        </HBox.margin>
+                        <font>
+                            <Font size="11.0" />
+                        </font></Label>
+                    <TextField fx:id="outputField" prefHeight="40" prefWidth="235.0" />
+                </children>
+            </HBox>
+            <Button fx:id="clearButton" alignment="CENTER" mnemonicParsing="false" onAction="#clearAllButtonClick" prefHeight="25.0" prefWidth="81.0" text="Clear">
+                <VBox.margin>
+                    <Insets bottom="16.0" />
+                </VBox.margin>
+            <font>
+               <Font size="10.0" />
+            </font></Button>
+        </children>
+
+    </VBox>
+   <Pane prefHeight="98.0" prefWidth="532.0">
+      <children>
+         <Button fx:id="kembaliButton" layoutX="50.0" layoutY="38.0" mnemonicParsing="false" onAction="#kembaliButtonOnAction" prefHeight="25.0" prefWidth="75.0" text="Kembali" />
+         <Button fx:id="exitButton" layoutX="399.0" layoutY="38.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="25.0" prefWidth="75.0" text="Keluar" textFill="RED" />
+      </children>
+   </Pane>
+</VBox>

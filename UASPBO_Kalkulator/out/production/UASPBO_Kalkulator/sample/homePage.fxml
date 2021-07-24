@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.0" prefWidth="419.0" style="-fx-background-color: ffcc99;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.homePageController">
+   <children>
+      <Button fx:id="kalkulatorButton" layoutX="135.0" layoutY="61.0" mnemonicParsing="false" onAction="#kalkulatorButtonOnAction" prefHeight="40.0" prefWidth="150.0" text="Kalkulator">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="bmiButton" layoutX="135.0" layoutY="154.0" mnemonicParsing="false" onAction="#bmiButtonOnAction" prefHeight="40.0" prefWidth="150.0" text="Kalkulator BMI">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="konversiButton" layoutX="135.0" layoutY="246.0" mnemonicParsing="false" onAction="#konversiButtonOnAction" prefHeight="40.0" prefWidth="150.0" text="Konversi">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="exitButton" layoutX="335.0" layoutY="343.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="30.0" prefWidth="70.0" text="Keluar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
